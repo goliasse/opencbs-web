@@ -1,0 +1,27 @@
+{
+  "name": "opencbs-web",
+  "version": "0.1.0",
+  "authors": [
+    "Pavel Bastov <pbastov@gmail.com>"
+  ],
+  "description": "OpenCBS Web App",
+  "license": "LGPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.3.1",
+    "jquery": "~2.0.3"
+  },
+  "devDependencies": {
+    "ember": "~1.3.1",
+    "jquery": "~2.0.3"
+    "normalize-css": "~2.1.3"
+  }
+}

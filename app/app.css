@@ -1,0 +1,194 @@
+body {
+	background-color: #eee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+input, button {
+  font-size: inherit;
+  padding: 0.2em;
+  border-radius: 3px;
+  display: block;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+  border: 1px solid silver;
+  padding: 0.3em;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1px solid #328ff1;
+}
+
+button {
+  background: #328ff1;
+  border: 1px solid #328ff1;
+  color: white;
+}
+
+button:active {
+  background: #99c7f8;
+  border: 1px solid #99c7f8;
+}
+
+.content {
+  position: absolute;
+  top: 42px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.section {
+	clear: both	
+	padding: 0;
+	margin: 0;
+}
+
+.col {
+	display: block;
+	float: left;
+	margin: 0;
+  padding: 0;
+}
+
+.group:before,
+.group:after {
+	content: '';
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+/* Navigation bar */
+nav {
+	color: white;
+	left: 0;
+	top: 0;
+	right: 0;
+	display: none;
+  background: #4484c7;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.2),0px -1px 0px rgba(0,0,0,0.1) inset;
+  height: 36px;
+  line-height: 36px;
+}
+
+nav.authenticated {
+	display: block;
+}
+
+nav ul {
+  display: block;
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+}
+
+nav ul li {
+  display: block;
+  float: right;
+  height: 100%;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+nav ul li:hover {
+  background: #4a8fd9;
+}
+
+nav ul li.dashboard {
+  float: left;
+}
+
+nav ul li a,
+nav ul li a:active {
+  color: white;
+}
+
+/* Login */
+
+.login-page {
+  background-color: #eee;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.login-table {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+.login-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.login-page form {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.login-page form input, .login-page form button {
+  display: block;
+  width: 100%;
+}
+
+.login-page .col1,
+.login-page .col2,
+.login-page .col3 {
+  padding-top: 10px;
+  width: 100%;
+}
+
+.login-page .col3 {
+  width: 128px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 640px) {
+  .login-page .col1,
+  .login-page .col2 {
+    width: 50%;
+  }
+
+  .login-page .col1 {
+    padding-right: 5px;
+  }
+
+  .login-page .col2 {
+    padding-left: 5px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .login-page .col1,
+  .login-page .col2 {
+    width: 40%;
+    padding-right: 10px;
+  }
+
+  .login-page .col3 {
+    width: 20%;
+  }
+}
