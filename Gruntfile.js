@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
     concat: {
       debug: {
-        src: ['app/app.js', 'app/components/*.js', 'app/config/*.js', 'app/routes/*.js', 'app/controllers/*.js'],
+        src: ['app/app.js', 'app/models/*.js', 'app/components/*.js', 'app/config/*.js', 'app/routes/*.js', 'app/controllers/*.js'],
         dest: 'debug/assets/application.js'
       }
     },
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'vendor',
           flatten: true,
-          src: ['jquery/jquery.js', 'jquery.cookie/jquery.cookie.js', 'handlebars/handlebars.js', 'ember/ember.js'],
+          src: ['jquery/jquery.js', 'jquery.cookie/jquery.cookie.js', 'handlebars/handlebars.js', 'ember/ember.js', 'ember-data/ember-data.js'],
           dest: 'debug/vendor'
         }]
       }

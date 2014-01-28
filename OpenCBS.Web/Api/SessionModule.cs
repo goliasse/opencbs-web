@@ -9,6 +9,21 @@ namespace OpenCBS.Web.Api
     {
         public SessionModule(IUserRepository userRepository, ISessionCache sessionCache)
         {
+            Get["/api/sessions/{value}"] = x =>
+            {
+                System.Threading.Thread.Sleep(2000);
+                return new
+                {
+                    id = "12345",
+                    user = new
+                    {
+                        id = 1,
+                        firstName = "Pavel",
+                        lastName = "Bastov"
+                    }
+                };
+            };
+
             Post["/api/sessions"] = x =>
             {
                 var username = (string) Request.Form.Username;
