@@ -1,1 +1,3 @@
-App.Model = Ember.Object.extend();
+App.Model = Ember.Object.extend({
+  
+});

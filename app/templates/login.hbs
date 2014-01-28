@@ -1,0 +1,16 @@
+<div class="login-page">
+  <div class="login-table">
+    <div class="login-cell">
+      <form {{action "login" on="submit"}}>
+        <div class="section group">
+          <div class="col"><strong>Login</strong> to opencbs-web</div>
+        </div>
+        <div class="section group">
+          <div class="col col1">{{input type="text" value=username placeholder="Username"}}</div>
+          <div class="col col2">{{input type="password" value=password placeholder="Password"}}</div>
+          <div class="col col3"><button type="submit">Login</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
