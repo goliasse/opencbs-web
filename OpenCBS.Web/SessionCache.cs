@@ -7,14 +7,14 @@ namespace OpenCBS.Web
 {
     public class SessionCache : ISessionCache
     {
-        private readonly Dictionary<Guid, User> _cache = new Dictionary<Guid, User>();
+        private readonly Dictionary<Guid, Session> _cache = new Dictionary<Guid, Session>();
 
-        public void Set(Guid guid, User user)
+        public void Set(Guid guid, Session session)
         {
-            _cache[guid] = user;
+            _cache[guid] = session;
         }
 
-        public User Get(Guid guid)
+        public Session Get(Guid guid)
         {
             return _cache.ContainsKey(guid) ? _cache[guid] : null;
         }

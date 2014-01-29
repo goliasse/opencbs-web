@@ -6,8 +6,8 @@ namespace OpenCBS.Web.Interface
 {
     public interface ISessionCache
     {
-        void Set(Guid guid, User user);
-        User Get(Guid guid);
+        void Set(Guid guid, Session session);
+        Session Get(Guid guid);
         void Remove(Guid guid);
     }
 }

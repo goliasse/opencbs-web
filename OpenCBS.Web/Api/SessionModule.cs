@@ -2,6 +2,7 @@
 using Nancy;
 using OpenCBS.Web.Interface;
 using OpenCBS.Web.Interface.Repository;
+using OpenCBS.Web.Model;
 
 namespace OpenCBS.Web.Api
 {
@@ -11,21 +12,28 @@ namespace OpenCBS.Web.Api
         {
             Get["/api/sessions/{value}"] = x =>
             {
-                System.Threading.Thread.Sleep(2000);
+                var guid = (Guid) x.value;
+                var session = sessionCache.Get(guid);
+                if (session == null)
+                {
+                    return new
+                    {
+                        isAuthenticated = false,
+                    };
+                }
+
                 return new
                 {
-                    id = "12345",
-                    user = new
-                    {
-                        id = 1,
-                        firstName = "Pavel",
-                        lastName = "Bastov"
-                    }
+                    userId = session.User.Id,
+                    firstName = session.User.FirstName,
+                    lastName = session.User.LastName,
+                    isAuthenticated = true
                 };
             };
 
             Post["/api/sessions"] = x =>
             {
+                var guid = (Guid) Request.Form.Id;
                 var username = (string) Request.Form.Username;
                 var password = (string) Request.Form.Password;
 
@@ -34,9 +42,17 @@ namespace OpenCBS.Web.Api
                 var user = userRepository.FindByUsernameAndPassword(username, password);
                 if (user == null) return HttpStatusCode.Unauthorized;
 
-                var guid = Guid.NewGuid();
-                sessionCache.Set(guid, user);
-                return new { authToken = guid };
+                var session = new Session { Id = guid, User = user };
+                sessionCache.Set(guid, session);
+
+                return new
+                {
+                    id = guid,
+                    isAuthenticated = true,
+                    userID = user.Id,
+                    firstName = user.FirstName,
+                    lastName = user.LastName
+                };
             };
 
             Delete["/api/sessions/{value:guid}"] = x =>

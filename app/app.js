@@ -8,7 +8,8 @@ window.OpenCBS = Ember.Application.create({
 
 OpenCBS.AuthenticatedRoute = Ember.Route.extend({
   beforeModel: function() {
-    if (!this.controllerFor('application').get('isAuthenticated')) {
+    var session = OpenCBS.Session.current();
+    if (!session.get('isAuthenticated')) {
       this.transitionTo('login');
     }
   }

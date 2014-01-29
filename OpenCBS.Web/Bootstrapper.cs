@@ -37,7 +37,10 @@ namespace OpenCBS.Web
                 if (guid == Guid.Empty) return null;
 
                 var sessionCache = container.Resolve<ISessionCache>();
-                context.CurrentUser = sessionCache.Get(guid);
+                var session = sessionCache.Get(guid);
+                if (session == null) return null;
+
+                context.CurrentUser = sessionCache.Get(guid).User;
 
                 return null;
             };
