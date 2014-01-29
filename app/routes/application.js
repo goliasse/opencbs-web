@@ -2,7 +2,7 @@ OpenCBS.ApplicationRoute = Ember.Route.extend({
   model: function() {
     var id = $.cookie('sessionId');
     if (!id) {
-      id = createGuid();
+      id = this.createGuid();
       $.cookie('sessionId', id);
     }
     var session = OpenCBS.Session.current();
