@@ -1,7 +1,21 @@
 OpenCBS.ApplicationController = Ember.ObjectController.extend({
   actions: {
     logout: function() {
-      this.transitionToRoute('logout');
+      var id = this.get('id');
+      var self = this;
+      $.ajax({
+        url: '/api/sessions/' + id,
+        type: 'DELETE',
+        success: function() {
+          self.setProperties({
+            isAuthenticated: false,
+            userId: null,
+            firstName: null,
+            lastName: null
+          });
+          self.transitionToRoute('login');
+        }
+      });
     }
   },
 

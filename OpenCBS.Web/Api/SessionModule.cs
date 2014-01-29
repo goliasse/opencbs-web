@@ -58,7 +58,7 @@ namespace OpenCBS.Web.Api
             Delete["/api/sessions/{value:guid}"] = x =>
             {
                 sessionCache.Remove(x.value);
-                return HttpStatusCode.OK;
+                return HttpStatusCode.NoContent;
             };
         }
     }
