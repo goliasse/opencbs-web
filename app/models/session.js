@@ -1,4 +1,4 @@
-App.Session = App.Model.extend({
+OpenCBS.Session = OpenCBS.Model.extend({
   id: null,
   user: null,
 
@@ -7,11 +7,11 @@ App.Session = App.Model.extend({
   }.property('user')
 });
 
-App.Session.reopenClass({
+OpenCBS.Session.reopenClass({
   find: function(id) {
     return $.getJSON('/api/sessions/' + id).then(function(response) {
-      var session = App.Session.create({ id: response.id });
-      session.set('user', App.User.create(response.user));
+      var session = OpenCBS.Session.create({ id: response.id });
+      session.set('user', OpenCBS.User.create(response.user));
       return session;
     });
   }

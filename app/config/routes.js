@@ -1,9 +1,9 @@
-App.Router.map(function() {
+OpenCBS.Router.map(function() {
   this.route('login');
   //this.route('logout');
   //this.route('about');
 });
 
-App.Router.reopen({
+OpenCBS.Router.reopen({
   location: 'history'
 });

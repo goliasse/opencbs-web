@@ -1,3 +1,1 @@
-App.Model = Ember.Object.extend({
-  
-});
+OpenCBS.Model = Ember.Object.extend();

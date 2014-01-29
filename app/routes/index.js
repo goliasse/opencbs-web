@@ -1,1 +1,1 @@
-App.IndexRoute = App.AuthenticatedRoute.extend();
+OpenCBS.IndexRoute = OpenCBS.AuthenticatedRoute.extend();

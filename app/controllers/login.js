@@ -1,1 +1,1 @@
-App.LoginController = Ember.Controller.extend();
+OpenCBS.LoginController = Ember.Controller.extend();

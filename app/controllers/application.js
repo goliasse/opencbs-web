@@ -1,4 +1,4 @@
-App.ApplicationController = Ember.Controller.extend({
+OpenCBS.ApplicationController = Ember.Controller.extend({
   actions: {
     logout: function() {
       this.transitionToRoute('logout');

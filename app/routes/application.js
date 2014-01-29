@@ -1,10 +1,10 @@
-App.ApplicationRoute = Ember.Route.extend({
+OpenCBS.ApplicationRoute = Ember.Route.extend({
   model: function() {
     var id = $.cookie('sessionId');
     if (id) {
-      return App.Session.find(id);
+      return OpenCBS.Session.find(id);
     } else {
-      return App.Session.create();
+      return OpenCBS.Session.create();
     }
   },
 
