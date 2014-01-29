@@ -1,9 +1,14 @@
-OpenCBS.ApplicationController = Ember.Controller.extend({
+OpenCBS.ApplicationController = Ember.ObjectController.extend({
   actions: {
     logout: function() {
       this.transitionToRoute('logout');
     }
   },
 
-  isAuthenticatedBinding: 'this.model.isAuthenticated'
+  displayName: function() {
+    if (!this.get('isAuthenticated')) {
+      return null;
+    }
+    return this.get('firstName') + ' ' + this.get('lastName');
+  }.property('isAuthenticated', 'firstName', 'lastName')
 });
