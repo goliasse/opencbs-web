@@ -14,3 +14,5 @@ OpenCBS.AuthenticatedRoute = Ember.Route.extend({
     }
   }
 });
+
+OpenCBS.Model = Ember.Object.extend();

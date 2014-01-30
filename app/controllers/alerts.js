@@ -1,0 +1,1 @@
+OpenCBS.AlertsController = Ember.ArrayController.extend();

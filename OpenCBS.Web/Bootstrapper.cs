@@ -48,9 +48,9 @@ namespace OpenCBS.Web
 
         private static Guid GetGuid(NancyContext context)
         {
-            if (!context.Request.Cookies.ContainsKey("auth_token")) return Guid.Empty;
+            if (!context.Request.Cookies.ContainsKey("sessionId")) return Guid.Empty;
 
-            var cookieValue = context.Request.Cookies["auth_token"];
+            var cookieValue = context.Request.Cookies["sessionId"];
 
             Guid guid;
             if (string.IsNullOrEmpty(cookieValue) || !Guid.TryParse(cookieValue, out guid)) return Guid.Empty;

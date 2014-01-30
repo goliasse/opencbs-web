@@ -2,13 +2,4 @@
 
 <div class="content">
   {{outlet}}
-
-  <p>Token: {{model.id}}</p>
-  <p>user: {{model.user.firstName}} {{model.user.lastName}}</p>
-
-  {{#if isAuthenticated}}
-  AUTHENTICATED!!!
-  {{/if}}
-
-  <p>{{#link-to 'index'}}Home{{/link-to}}</p>
 </div>
