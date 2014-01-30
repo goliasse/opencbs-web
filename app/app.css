@@ -2,6 +2,7 @@ html, body {
 	background-color: #eee;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  overflow: hidden;
 }
 
 *, *:before, *:after {
@@ -52,7 +53,7 @@ button:active {
   bottom: 0;
   left: 0;
   right: 0;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
 .section {
