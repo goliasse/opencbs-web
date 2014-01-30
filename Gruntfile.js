@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
     concat: {
       debug: {
-        src: ['app/app.js', 'app/mixins/*.js', 'app/models/*.js', 'app/components/*.js', 'app/config/*.js', 'app/routes/*.js', 'app/controllers/*.js'],
+        src: ['app/app.js', 'app/mixins/*.js', 'app/models/*.js', 'app/views/*.js', 'app/components/*.js', 'app/config/*.js', 'app/routes/*.js', 'app/controllers/*.js'],
         dest: 'debug/assets/application.js'
       }
     },

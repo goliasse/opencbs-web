@@ -210,11 +210,13 @@ nav ul li a:active {
 
 .alerts .col-contract-code {
   width: 20%;
+  border-right: 1px solid silver;
 }
 
 .alerts .col-late-days {
   width: 8%;
   text-align: center;
+  border-right: 1px solid silver;
 }
 
 @media screen and (min-width: 480px) and (max-width: 640px) {
