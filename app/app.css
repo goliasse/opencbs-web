@@ -236,6 +236,23 @@ nav ul li:active {
   text-align: center;
 }
 
+.alerts .col-client-name {
+  width: 20%;
+}
+
+.alerts .col-amount {
+  width: 10%;
+  text-align: right;
+}
+
+.alerts .col-loan-officer {
+  width: 20%;
+}
+
+.alerts .col-branch-name {
+  width: 15%;
+}
+
 .alerts .col-late-days .par-365,
 .alerts .col-late-days .par-181-365,
 .alerts .col-late-days .par-91-180,

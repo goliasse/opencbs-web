@@ -1,7 +1,6 @@
-﻿using Nancy;
+﻿using System.Linq;
 using OpenCBS.Web.Interface.Repository;
 using OpenCBS.Web.Model;
-using System.Linq;
 
 namespace OpenCBS.Web.Api
 {
@@ -19,7 +18,11 @@ namespace OpenCBS.Web.Api
                         .Select(x => new
                         {
                             contractCode = x.ContractCode,
-                            lateDays = x.LateDays
+                            lateDays = x.LateDays,
+                            clientName = x.ClientName,
+                            amount = x.Amount,
+                            loanOfficer = x.LoanOfficer,
+                            branchName = x.BranchName
                         })
                 };
             };

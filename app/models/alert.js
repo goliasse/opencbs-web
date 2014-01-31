@@ -1,6 +1,10 @@
 OpenCBS.Alert = OpenCBS.Model.extend({
   contractCode: null,
   lateDays: 0,
+  clientName: null,
+  amount: 0,
+  loanOfficer: null,
+  branchName: null,
 
   lateDaysClass: function() {
     var lateDays = this.get('lateDays');
