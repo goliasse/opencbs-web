@@ -1,3 +1,8 @@
+/*
+  Since this is a full-fledged application, it is most capable on bigger screens.
+  As such, the approach taken for defining styles is hi-res desktop first, not mobile first.
+*/
+
 html, body {
 	background-color: #eee;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -174,131 +179,6 @@ nav ul li:active {
   width: 128px;
 }
 
-/* Alerts */
-
-.alerts {
-  position: absolute;
-  top: 20px;
-  bottom: 20px;
-  left: 50px;
-  right: 50px;
-  font-size: 12px;
-}
-
-.alerts header {
-  font-weight: bold;
-  background-color: rgba(248, 248, 248, 0.9);
-  background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(241, 241, 241, 0.9));
-  /*border-radius: 3px 3px 0 0;*/
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
-  height: 44px;
-  line-height: 44px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 10;
-}
-
-.alerts header .col {
-  padding: 0 10px;
-}
-
-.alerts section {
-  position: absolute;
-  top: 43px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: scroll;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  background: white;
-}
-
-.alerts section .section:nth-child(odd) {
-  background: rgba(177, 234, 247, 0.25);
-}
-
-.alerts section .col {
-  height: 25px;
-  line-height: 25px;
-  padding: 0 10px;
-  /*border-right: 1px dotted silver;*/
-}
-
-.alerts .col-contract-code {
-  width: 20%;
-}
-
-.alerts .col-late-days {
-  width: 8%;
-  text-align: center;
-}
-
-.alerts .col-client-name {
-  width: 20%;
-}
-
-.alerts .col-amount {
-  width: 10%;
-  text-align: right;
-}
-
-.alerts .col-loan-officer {
-  width: 20%;
-}
-
-.alerts .col-branch-name {
-  width: 15%;
-}
-
-.alerts .col-late-days .par-365,
-.alerts .col-late-days .par-181-365,
-.alerts .col-late-days .par-91-180,
-.alerts .col-late-days .par-61-90,
-.alerts .col-late-days .par-31-60,
-.alerts .col-late-days .par-1-30,
-.alerts .col-late-days .par-0 {
-  height: 19px;
-  line-height: 19px;
-  margin: 3px auto;
-  display: block;
-  font-size: 10px;
-  font-weight: bold;
-  color: white;
-  width: 30px;
-  border-radius: 2px;
-}
-
-.alerts .col-late-days .par-365 {
-  background-color: #b22222;
-}
-
-.alerts .col-late-days .par-181-365 {
-  background-color: #b22222;
-}
-
-.alerts .col-late-days .par-91-180 {
-  background-color: #e45735;
-}
-
-.alerts .col-late-days .par-61-90 {
-  background-color: #d2691e;
-}
-
-.alerts .col-late-days .par-31-60 {
-  background-color: #daa520;
-}
-
-.alerts .col-late-days .par-1-30 {
-  background-color: #00b355;
-}
-
-.alerts .col-late-days .par-0 {
-  background-color: #eee;
-  color: #652d90;
-}
 
 @media screen and (min-width: 480px) and (max-width: 640px) {
   /* Login */

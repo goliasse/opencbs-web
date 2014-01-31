@@ -9,6 +9,10 @@ module.exports = function(grunt) {
       debug: {
         src: ['app/app.js', 'app/mixins/*.js', 'app/models/*.js', 'app/views/*.js', 'app/components/*.js', 'app/config/*.js', 'app/routes/*.js', 'app/controllers/*.js'],
         dest: 'debug/assets/application.js'
+      },
+      cssDebug: {
+        src: ['app/app.css', 'app/css/*.css'],
+        dest: 'debug/assets/app.css'
       }
     },
 
@@ -19,12 +23,6 @@ module.exports = function(grunt) {
           cwd: 'app',
           src: 'index.html',
           dest: 'debug'
-        },
-        {
-          expand: true,
-          cwd: 'app',
-          src: 'app.css',
-          dest: 'debug/assets'
         },
         {
           expand: true,
@@ -74,6 +72,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build:debug', "Building in debug mode", [
     'clean:debug',
     'concat:debug',
+    'concat:cssDebug',
     'copy:debug',
     'emberTemplates:debug'
   ]);
