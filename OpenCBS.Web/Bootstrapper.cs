@@ -3,6 +3,7 @@ using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.Conventions;
 using Nancy.Elmah;
+using Nancy.Json;
 using Nancy.TinyIoc;
 using OpenCBS.Web.Interface;
 
@@ -14,6 +15,11 @@ namespace OpenCBS.Web
         {
             base.ApplicationStartup(container, pipelines);
             Elmahlogging.Enable(pipelines, "elmah");
+
+            // TODO: the below line increses the maximum json payload size
+            // to an obscenely high value (which will not ever be hit).
+            // This is to prevent "Nancy.Json.JsonSettings.MaxJsonLength exceeded" exceptions.
+            JsonSettings.MaxJsonLength = int.MaxValue;
         }
 
         protected override IRootPathProvider RootPathProvider

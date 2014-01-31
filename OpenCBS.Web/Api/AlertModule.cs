@@ -22,7 +22,10 @@ namespace OpenCBS.Web.Api
                             clientName = x.ClientName,
                             amount = x.Amount,
                             loanOfficer = x.LoanOfficer,
-                            branchName = x.BranchName
+                            branchName = x.BranchName,
+                            phone = x.Phone,
+                            address = x.Address,
+                            city = x.City
                         })
                 };
             };

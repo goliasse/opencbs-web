@@ -1,10 +1,13 @@
 <div class="alerts">
   <header class="section group" {{bind-attr style='view.headerStyle'}}>
-    <div class="col col-contract-code">Contract&nbsp;code</div>
+    <div class="col col-contract-code">Contract code</div>
     <div class="col col-late-days">Late</div>
     <div class="col col-amount">Amount</div>
     <div class="col col-client-name">Client</div>
-    <div class="col col-loan-officer">Loan&nbsp;officer</div>
+    <div class="col col-phone">Phone</div>
+    <div class="col col-address">Address</div>
+    <div class="col col-city">City</div>
+    <div class="col col-loan-officer">Loan officer</div>
     <div class="col col-branch-name">Branch</div>
   </header>
   
@@ -15,6 +18,9 @@
         <div class="col col-late-days"><span {{bind-attr class='lateDaysClass'}}>{{lateDays}}</span></div>
         <div class="col col-amount">{{amount}}</div>
         <div class="col col-client-name">{{clientName}}</div>
+        <div class="col col-phone">{{phone}}</div>
+        <div class="col col-address">{{address}}</div>
+        <div class="col col-city">{{city}}</div>
         <div class="col col-loan-officer">{{loanOfficer}}</div>
         <div class="col col-branch-name">{{branchName}}</div>
       </div>

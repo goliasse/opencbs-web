@@ -21,7 +21,10 @@ namespace OpenCBS.Web.Repository
                         a.client_name ClientName,
                         a.amount Amount,
                         u.first_name + ' ' + u.last_name LoanOfficer,
-                        a.branch_name BranchName
+                        a.branch_name BranchName,
+                        a.phone Phone,
+                        a.address Address,
+                        a.city City
                     from dbo.Alerts(getdate(), @userId, 0) a
                     left join Users u on u.id = a.loan_officer_id
                     order by a.late_days desc
