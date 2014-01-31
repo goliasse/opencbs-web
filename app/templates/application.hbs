@@ -1,4 +1,8 @@
-{{navigation-bar isAuthenticated=isAuthenticated displayName=displayName logout="logout"}}
+<nav {{bind-attr class='isAuthenticated:authenticated'}}>
+  <ul>
+    <li class="logout" {{action 'logout'}}><i class="fa fa-sign-out"></i></li>
+  </ul>
+</nav>
 
 <div class="content">
   {{outlet}}
