@@ -220,8 +220,10 @@ nav ul li:active {
   background: rgba(177, 234, 247, 0.25);
 }
 
-.alerts .col {
-  padding: 10px;
+.alerts section .col {
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
   /*border-right: 1px dotted silver;*/
 }
 
@@ -232,6 +234,53 @@ nav ul li:active {
 .alerts .col-late-days {
   width: 8%;
   text-align: center;
+}
+
+.alerts .col-late-days .par-365,
+.alerts .col-late-days .par-181-365,
+.alerts .col-late-days .par-91-180,
+.alerts .col-late-days .par-61-90,
+.alerts .col-late-days .par-31-60,
+.alerts .col-late-days .par-1-30,
+.alerts .col-late-days .par-0 {
+  height: 19px;
+  line-height: 19px;
+  margin: 3px auto;
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  width: 30px;
+  border-radius: 2px;
+}
+
+.alerts .col-late-days .par-365 {
+  background-color: #b22222;
+}
+
+.alerts .col-late-days .par-181-365 {
+  background-color: #b22222;
+}
+
+.alerts .col-late-days .par-91-180 {
+  background-color: #e45735;
+}
+
+.alerts .col-late-days .par-61-90 {
+  background-color: #d2691e;
+}
+
+.alerts .col-late-days .par-31-60 {
+  background-color: #daa520;
+}
+
+.alerts .col-late-days .par-1-30 {
+  background-color: #00b355;
+}
+
+.alerts .col-late-days .par-0 {
+  background-color: #eee;
+  color: #652d90;
 }
 
 @media screen and (min-width: 480px) and (max-width: 640px) {

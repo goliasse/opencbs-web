@@ -8,7 +8,7 @@
     {{#each}}
       <div class="section group">
         <div class="col col-contract-code">{{contractCode}}</div>
-        <div class="col col-late-days">{{lateDays}}</div>
+        <div class="col col-late-days"><span {{bind-attr class='lateDaysClass'}}>{{lateDays}}</span></div>
       </div>
     {{/each}}
   </section>
