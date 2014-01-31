@@ -2,7 +2,7 @@ html, body {
 	background-color: #eee;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  overflow: hidden;
+  color: #211922;
 }
 
 *, *:before, *:after {
@@ -17,18 +17,19 @@ html, body {
   outline: 0;
 }
 
+/*
 ::-webkit-scrollbar {
   width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2574cd;
+  background-color: #c7c7c7;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #d9d9d9;
-  color: blue;
+  background-color: #eee;
 }
+*/
 
 input, button {
   font-size: inherit;
@@ -62,7 +63,7 @@ button:active {
 
 .content {
   position: fixed;
-  top: 36px;
+  top: 44px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -96,15 +97,14 @@ button:active {
 
 /* Navigation bar */
 nav {
-	color: white;
+  background: #ffffff;
 	left: 0;
 	top: 0;
 	right: 0;
 	display: none;
-  background: #4484c7;
-  box-shadow: 0px 1px 1px rgba(0,0,0,0.2),0px -1px 0px rgba(0,0,0,0.1) inset;
-  height: 36px;
-  line-height: 36px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  height: 44px;
+  z-index: 500;
 }
 
 nav.authenticated {
@@ -187,51 +187,51 @@ nav ul li a:active {
 
 .alerts {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 20px;
+  bottom: 20px;
+  left: 50px;
+  right: 50px;
   font-size: 12px;
-}
-
-.alerts .section {
-  line-height: 31px;
 }
 
 .alerts header {
   font-weight: bold;
-  background: #232528;
-  height: 32px;
+  background-color: rgba(248, 248, 248, 0.9);
+  background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(241, 241, 241, 0.9));
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+  height: 44px;
+  line-height: 44px;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  color: white;
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
   z-index: 10;
+}
+
+.alerts header .col {
+  padding: 0 10px;
 }
 
 .alerts section {
   position: absolute;
-  top: 31px;
+  top: 43px;
   left: 0;
   right: 0;
   bottom: 0;
   overflow-y: scroll;
-}
-
-.alerts section .section {
-  background-color: #f0f0f0;
-  border-bottom: 1px dotted #cccccc;
-  /*background-image: repeating-linear-gradient(white, white 31px, hotpink 31px, hotpink 31px);*/
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  background: white;
 }
 
 .alerts section .section:nth-child(odd) {
-  background: #f6f6f6;
+  background: rgba(177, 234, 247, 0.25);
 }
 
 .alerts .col {
-  padding: 0 5px;
+  padding: 10px;
+  border-right: 1px dotted silver;
 }
 
 .alerts .col-contract-code {
