@@ -149,3 +149,5 @@ $RECYCLE.BIN/
 
 vendor
 node_modules
+OpenCBS.Web/App_Data/Elmah
+OpenCBS.Web/App_Readme

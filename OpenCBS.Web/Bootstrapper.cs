@@ -2,6 +2,7 @@
 using Nancy;
 using Nancy.Bootstrapper;
 using Nancy.Conventions;
+using Nancy.Elmah;
 using Nancy.TinyIoc;
 using OpenCBS.Web.Interface;
 
@@ -9,6 +10,12 @@ namespace OpenCBS.Web
 {
     public class Bootstrapper : DefaultNancyBootstrapper
     {
+        protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
+        {
+            base.ApplicationStartup(container, pipelines);
+            Elmahlogging.Enable(pipelines, "elmah");
+        }
+
         protected override IRootPathProvider RootPathProvider
         {
             get { return new RootPathProvider(); }
